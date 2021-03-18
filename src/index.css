@@ -18,9 +18,10 @@ body{
 }
 
 .addTask{  
-   margin: 0 auto;
+   display: block;
+   margin: 0;
+   margin-left: auto;
    padding: 0;
- 
 }
 .newTask{
    display: flex;
@@ -52,7 +53,6 @@ body{
 
 input::selection{
    background-color: rgba(255, 166, 0, 0.324);
-   padding: 3px;
 }
 
 select{ 
@@ -161,7 +161,7 @@ input[type=checkbox]{
 .delBtn{
    color: white;
    position: absolute;
-   right: 5px;
+   right: 10px;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -179,4 +179,8 @@ input[type=checkbox]{
 .delBtn:hover{
    color: orange;
    box-shadow: 0 0 0 1px  rgba(255, 255, 255, 0.255);
+}
+
+.expired{
+   color:rgb(236, 85, 70) !important;
 }

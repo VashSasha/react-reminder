@@ -18,14 +18,14 @@ export default class ShowDoneList extends React.Component{
           {this.doneList.map((item, i)=>{
             return(
                 <div className="task " index={i} key={i+1} >
+                  <span className="delBtn" data-listtype="done" onClick={this.props.deleteTask}>+</span>
                     <input type="checkbox"  checked={true} id={i} name="switch" onChange={this.props.returnTask} ></input>
               <label htmlFor={i}></label>
                   <div>
                       <p > <span className="priority">{item?.priority}</span>{item?.task}</p>
                       <div className="coment">
 												<p>{item?.notes} </p>
-												<p>{item?.date}</p>
-												<p>{item?.time}</p>
+												<p>{this.props.checkDate(item.date)} {item.time ? ` at: ${item.time}`:''}</p>
 											</div>
                   </div>
               </div>

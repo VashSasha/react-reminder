@@ -19,15 +19,15 @@ constructor(props){
             <div>
               <input type="date" name="date"/>
               <input type="time" name="time"  />
-              <select name="priority" placeholder="!!" id="priority">
+              <select name="priority" id="priority">
                 
-              <option value="" disabled selected>!</option>
+                <option defaultValue=""  ></option>
                 <option value="!">!</option>
                 <option value="!!">!!</option>
                 <option value="!!!">!!!</option>
               </select>
             </div>
-            <button onClick={this.props.handleChange} disabled={this.props.state.disabled}>+</button>
+            <button type="submit" onClick={this.props.handleChange} disabled={this.props.state.disabled}>+</button>
         </form>
       )
     }else if(this.el){
@@ -38,14 +38,14 @@ constructor(props){
         <div>
           <input type="date" name="date"  defaultValue={this.el.date}/>
           <input type="time" name="time" defaultValue={this.el.time} />
-          <select name="priority" id="priority"  defaultValue={this.el.priority}>
+          <select name="priority" id="priority"  defaultValue={this.el?.priority}>
             <option ></option>
             <option value="!">!</option>
             <option value="!!">!!</option>
             <option value="!!!">!!!</option>
           </select>
         </div>
-        <button onClick={this.props.onSubmit}  disabled={this.props.element.disabled}>+</button>
+        <button onClick={this.props.onSubmit}  disabled={this.props.element.disabled}>✓</button>
     </form>)
     }
       
