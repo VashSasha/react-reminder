@@ -18,9 +18,10 @@ body{
 }
 
 .addTask{  
-   display: block;
-   margin: 0;
-   margin-left: auto;
+   margin: 0;  
+   margin-right: auto;
+   /* display: block; */
+   /* margin-left: auto; */
    padding: 0;
 }
 .newTask{

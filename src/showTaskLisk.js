@@ -14,7 +14,7 @@ export default class ShowTaskLisk extends React.Component{
             {this.taskList.map((item, i)=>{
               return(
                 <div className="task" index={i} key={i+1}  >
-                    <span className="delBtn" onClick={this.props.deleteTask}>+</span>
+                    <span className="delBtn" data-listtype="task" onClick={this.props.deleteTask}>+</span>
   
                     <input type="checkbox" defaultChecked={this.props.state.checkbox} disabled={this.props.state.checkbox} onChange={this.props.checked} id={i+"check"}  ></input>
                     <label htmlFor={i+"check"}></label>

@@ -132,8 +132,8 @@ deleteTask(e){
 	if(e.target.dataset.listtype==="done") {
 		this.doneList.splice(index, 1); 
 		if(this.doneList.length<1)return this.setState({showD: false})
-		}
-	return this.taskList.splice(index, 1);
+	}
+	if(e.target.dataset.listtype==="task")return this.taskList.splice(index, 1);
 }
 
 changeShow(){
